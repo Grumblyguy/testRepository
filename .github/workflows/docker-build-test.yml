@@ -63,7 +63,7 @@ jobs:
           if ("${{inputs.versiontemplate}}" != "__DEFAULT__") {
             imageversion = `${{inputs.versiontemplate}}`
           }
-          print(buildargsstr)
+          console.log(buildargsstr)
           core.setOutput('buildargs', buildargsstr)
           core.setOutput('imagetag', `ghcr.io/${imagename}:${imageversion}`)
     - name: Docker Build
